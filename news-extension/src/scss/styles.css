@@ -1,0 +1,303 @@
+@use "globals";
+@use "components";
+body {
+  background-color: #232121;
+}
+
+html,
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header section */
+header {
+  max-height: 12vw;
+}
+
+header .search {
+  width: 30vw;
+  height: 2vw;
+  left: 548px;
+  top: 43px;
+  border-bottom: 2px solid #e9e8ea;
+  border-right: transparent;
+  color: #e9e8ea;
+  background-color: transparent;
+  padding: 15px;
+  font-size: 1vw;
+  background-image: url("../images/Search-256.ico");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 15px 15px;
+  padding-left: 30px;
+}
+
+header .search:focus {
+  outline: none;
+}
+
+header input[type="search"]::-webkit-search-cancel-button {
+  /* vwove default */
+  -webkit-appearance: none;
+  /*Your new styles */
+  height: 15px;
+  width: 15px;
+  background: transparent;
+  background-image: url("../images/Cancel-256.ico");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 15px 15px;
+}
+
+header input[type="search"]::-webkit-search-cancel-button:hover {
+  cursor: pointer;
+}
+
+/* Trending section */
+.trending-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0vw 7.5vw;
+  border: none;
+}
+
+.trending-section .section-title {
+  width: 17vw;
+  height: 2.875vw;
+  font-weight: bold;
+  font-size: 1.5vw;
+  color: #e9e8ea;
+  margin: 5vw 0;
+}
+
+.trending-section .trending-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-height: 50%;
+}
+
+.trending-section .trending-items .trending-1 {
+  width: 48%;
+  border: none;
+}
+
+.trending-section .trending-items .trending-1:hover {
+  cursor: pointer;
+}
+
+.trending-section .trending-items .trending-1:hover .card-body {
+  max-height: 100%;
+  opacity: 1;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.trending-section .trending-items .trending-1:hover .card-body > * {
+  cursor: pointer;
+}
+
+.trending-section .trending-items .trending-1 .card-body {
+  position: absolute;
+  bottom: 0px;
+  max-height: 0;
+  opacity: 0;
+  color: #e9e8ea;
+  background-color: #303030;
+}
+
+.trending-section .trending-items .trending-1 .card-body .card-link {
+  font-size: 0.625vw;
+}
+
+.trending-section .trending-items .trending-1 .card-body .card-title {
+  font-size: 1.125vw;
+}
+
+.trending-section .trending-items .trending-1 .card-body .card-text {
+  font-size: 1vw;
+}
+
+.trending-section .trending-items .trending-1 .card-img-top {
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.trending-section .trending-items .card-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.trending-section .trending-items .card-list .card-list__top,
+.trending-section .trending-items .card-list .card-list__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 50%;
+}
+
+.trending-section .trending-items .card-list .card {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  background-color: #303030;
+  color: #e9e8ea;
+  overflow: hidden;
+  border: none;
+}
+
+.trending-section .trending-items .card-list .card:hover {
+  cursor: pointer;
+}
+
+.trending-section .trending-items .card-list .card:hover .card-body {
+  max-height: 100%;
+  opacity: 1;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.trending-section .trending-items .card-list .card:hover .card-body > * {
+  cursor: pointer;
+}
+
+.trending-section .trending-items .card-list .card .card-body {
+  position: absolute;
+  bottom: 0px;
+  max-height: 0;
+  opacity: 0;
+  color: #e9e8ea;
+  background-color: #303030;
+}
+
+.trending-section .trending-items .card-list .card .card-body :hover {
+  cursor: pointer;
+}
+
+.trending-section .trending-items .card-list .card .card-body .card-link {
+  font-size: 0.625vw;
+}
+
+.trending-section .trending-items .card-list .card .card-body .card-title {
+  font-size: 1.125vw;
+}
+
+.trending-section .trending-items .card-list .card .card-img-top {
+  min-width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  min-height: 100%;
+}
+
+/* Search Results */
+.recommended-section {
+  height: 100%;
+  margin: 4.6vw 7.5vw;
+  border: none;
+}
+
+.recommended-section .section-title {
+  width: 17vw;
+  height: 2.875vw;
+  font-weight: bold;
+  font-size: 1.5vw;
+  color: #e9e8ea;
+  margin: 5vw 0;
+}
+
+.recommended-section .section-items {
+  height: 100%;
+}
+
+.recommended-section .section-items .card-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.recommended-section .section-items .card-list .card {
+  width: 33%;
+  height: 20%;
+  margin-bottom: 1.875vw;
+  background-color: #303030;
+  color: #e9e8ea;
+  border: none;
+}
+
+.recommended-section .section-items .card-list .card .card-img-top {
+  height: 250px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.recommended-section .section-items .card-list .card .card-body > * {
+  margin: 1vw 0;
+}
+
+.recommended-section .section-items .card-list .card .card-body .card-link {
+  font-size: 0.625vw;
+}
+
+.recommended-section .section-items .card-list .card .card-body .card-title {
+  font-size: 1.125vw;
+}
+
+.recommended-section .section-items .card-list .card .card-body .card-text {
+  font-size: 1vw;
+}
+
+@-webkit-keyframes heightAnim {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 100%;
+  }
+}
+
+@keyframes heightAnim {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 100%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

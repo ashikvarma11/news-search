@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "short_name": "News Search",
+  "name": "News Search",
+  "author":"Ashik",
+  "version": "1.0.1",
+  "description":"News Search",
+  "icons": {
+
+    "16": "favicon.ico",
+    
+    "48": "favicon.ico",
+    
+    "128": "favicon.ico"
+  },
+  "chrome_url_overrides":{
+    "newtab":"index.html"
+  },
+  "browser_action": {
+    "default_popup":"popup.html"
+  }
+}
