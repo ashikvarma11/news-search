@@ -30,7 +30,7 @@
     "lint": "tslint -c tslint.json src/**/*.{ts,tsx} --fix --format verbose"
   },
   "hooks": {
-    "pre-commit": "lint-staged"
+    "pre-commit": "yarn lint"
   },
   "proxy": "http://localhost:3000",
   "eslintConfig": {
