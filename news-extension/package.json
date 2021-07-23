@@ -44,6 +44,9 @@
   },
   "proxy": "http://localhost:3000",
   "eslintConfig": {
+    "rules": {
+      "@typescript-eslint/no-unused-vars": "error"
+     },
     "extends": [
       "react-app",
       "react-app/jest"
