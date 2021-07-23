@@ -1,1 +1,1 @@
-import './CardList';
+import './CardList'

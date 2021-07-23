@@ -1,14 +1,19 @@
+import React from 'react'
 
-import React from 'react';
-type Props = {
-    handleSearch: Function
+interface Props {
+  handleSearch: (event: any) => void
 }
-const Header:React.FC<Props> = ({handleSearch}) => {
-return (<>
-<header className="container p-4 text-center">
-      <input type="search" placeholder="Search News..." className="search" onKeyDown={(event)=>handleSearch(event)}/>
-      </header>
-</>)
-}
+const Header: React.FC<Props> = ({ handleSearch }) => (
+  <>
+    <header className="container p-4 text-center">
+      <input
+        type="search"
+        placeholder="Search News..."
+        className="search"
+        onKeyDown={(event) => handleSearch(event)}
+      />
+    </header>
+  </>
+)
 
-export {Header};
+export { Header }

@@ -1,10 +1,5 @@
+import React from 'react'
 
-import React from 'react';
-type Props = {
-    
-}
-const CardList:React.FC<Props> = () => {
-return (<></>)
-}
+const CardList: React.FC<{}> = () => <></>
 
-export {CardList};
+export { CardList }

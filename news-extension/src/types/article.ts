@@ -1,23 +1,24 @@
-export type Article = {
-    author: string,
-    content: string,
-    description: string,
-    publishedAt: string,
-    source: Source,
-    id: string | null,
-    name: string,
-    title: string,
-    url: string,
-    urlToImage: string | null
+export interface Article {
+  author: string
+  category: string
+  country: string
+  description: string
+  published_at: string
+  source: string
+  name: string
+  title: string
+  url: string
+  image: string | null
 }
 
-type Source = {
-    id: string | null,
-    name: string
+interface Pagination {
+  limit: number
+  offset: number
+  count: number
+  total: number
 }
 
-export type News = {
-articles: Article[],
-status: string,
-totalResults: number
+export interface News {
+  data: Article[]
+  pagination: Pagination
 }
