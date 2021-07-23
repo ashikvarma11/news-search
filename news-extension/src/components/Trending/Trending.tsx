@@ -13,11 +13,11 @@ const Trending:React.FC<Props> = ({heroArticles}) => {
           { heroArticles[0] && <div className="card trending-1">
             <img
               className="card-img-top"
-              src={heroArticles[0].urlToImage || ''}
+              src={heroArticles[0].image!=null? heroArticles[0].image: 'https://images.puella-magi.net/thumb/2/27/No_Image_Wide.svg/800px-No_Image_Wide.svg.png?20110202071158'}
               alt="Card image cap"
             />
             <div className="card-body">
-            <a href={heroArticles[0].url} target="_blank"><h6 className="card-link">{heroArticles[0].source.name}</h6></a>
+            <a href={heroArticles[0].url} target="_blank"><h6 className="card-link">{heroArticles[0].source}</h6></a>
               <h5 className="card-title">{heroArticles[0].title}</h5>
               <p className="card-text">
               {heroArticles[0].description}
@@ -32,12 +32,12 @@ const Trending:React.FC<Props> = ({heroArticles}) => {
               return <div key={idx} className="card">
                 <img
                   className="card-img-top"
-                  src= {heroArticle.urlToImage || ''}
+                  src={heroArticle.image!=null? heroArticle.image: 'https://images.puella-magi.net/thumb/2/27/No_Image_Wide.svg/800px-No_Image_Wide.svg.png?20110202071158'}              
                   alt="Card image cap"
                   // onError={addDefaultSrc}
                 />
                 <div className="card-body">
-                <a href={heroArticle.url} target="_blank"><h6 className="card-link">{heroArticle.source.name}</h6></a>
+                <a href={heroArticle.url} target="_blank"><h6 className="card-link">{heroArticle.source}</h6></a>
                   <h5 className="card-title">
                   {heroArticle.title}
                   </h5>
@@ -51,12 +51,12 @@ const Trending:React.FC<Props> = ({heroArticles}) => {
               return <div key={idx} className="card">
                 <img
                   className="card-img-top"
-                  src={heroArticle.urlToImage || ''}
+                  src={heroArticle.image || ''}
                   alt="Card image cap"
                 />
                 <div className="card-body">
                   
-                <a href={heroArticle.url} target="_blank"><h6 className="card-link">{heroArticle.source.name}</h6></a>
+                <a href={heroArticle.url} target="_blank"><h6 className="card-link">{heroArticle.source}</h6></a>
                   <h5 className="card-title">
                    {heroArticle.title}
                   </h5>

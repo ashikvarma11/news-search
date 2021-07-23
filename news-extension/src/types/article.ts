@@ -1,23 +1,24 @@
 export type Article = {
     author: string,
-    content: string,
+    category: string,
+    country:string,
     description: string,
-    publishedAt: string,
-    source: Source,
-    id: string | null,
+    published_at: string,
+    source: string,
     name: string,
     title: string,
     url: string,
-    urlToImage: string | null
+    image: string | null
 }
 
-type Source = {
-    id: string | null,
-    name: string
+type Pagination = {
+    limit: number,
+    offset: number,
+    count:number,
+    total: number
 }
 
 export type News = {
-articles: Article[],
-status: string,
-totalResults: number
+data: Article[],
+pagination: Pagination
 }

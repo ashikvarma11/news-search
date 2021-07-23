@@ -4,11 +4,12 @@ import '././scss/styles.scss';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Home } from './components/Home/Home';
+import { Routing } from './Routing/Routing';
 function App() {
  
   return (
    <>
-   <Home />
+   <Routing />
    </>
   );
 }
