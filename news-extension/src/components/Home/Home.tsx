@@ -5,7 +5,7 @@ import { Recommended } from '../Recommended/Recommended'
 import { Trending } from '../Trending/Trending'
 import { Header } from './Header/Header'
 
-const API_KEY = '35f8c1e5309ee8254e08e54f7de30a47'
+const API_KEY = 'YOUR_API_KEY_HERE'
 const defaultQuery = 'happy'
 interface Props {
   interests: any[]
