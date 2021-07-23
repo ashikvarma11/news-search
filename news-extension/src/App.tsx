@@ -1,17 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import '././scss/styles.scss';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import React from 'react'
+import './scss/styles.scss'
+import { Routing } from './Routing/Routing'
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Home } from './components/Home/Home';
-import { Routing } from './Routing/Routing';
 function App() {
- 
   return (
-   <>
-   <Routing />
-   </>
-  );
+    <>
+      <Routing />
+    </>
+  )
 }
 
-export default App;
+export default App

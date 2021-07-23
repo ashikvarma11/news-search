@@ -1,23 +1,15 @@
-import React from 'react';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    useHistory
-  } from "react-router-dom";
-import { Home } from '../components/Home/Home';
-import { Interests } from '../components/Interests/Interests';
-type Props = {
+import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Home } from '../components/Home/Home'
+import { Interests } from '../components/Interests/Interests'
 
-}
-const Routing: React.FC<Props> = () => {
-    return (<>
-    
+const Routing: React.FC<{}> = () => (
+  <>
     <Router>
       <div>
         <Switch>
-          <Route exact path="/home">
-            <Home interests={[]}/>
+          <Route exact={true} path="/home">
+            <Home interests={[]} />
           </Route>
           <Route path="/">
             <Interests />
@@ -25,7 +17,7 @@ const Routing: React.FC<Props> = () => {
         </Switch>
       </div>
     </Router>
-    </>);
-}
+  </>
+)
 
-export {Routing}
+export { Routing }
